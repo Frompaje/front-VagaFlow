@@ -8,7 +8,7 @@ const listNav = [
   },
   {
     name: 'Login',
-    href: '/signIn',
+    href: '/login',
   },
   {
     name: 'Criar conta',
