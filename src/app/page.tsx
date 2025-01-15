@@ -1,3 +1,9 @@
+import { Header } from '@/pages/header'
+
 export default function Home() {
-  return <h1>show me</h1>
+  return (
+    <main className="bg-zinc-900 h-screen  text-white">
+      <Header />
+    </main>
+  )
 }
