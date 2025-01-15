@@ -1,8 +1,5 @@
-'use client'
-
-import { Menu, X } from 'lucide-react'
+import { MenuMobile } from '@/pages/header/menu-mobile'
 import Link from 'next/link'
-import { useState } from 'react'
 
 const listNav = [
   {
@@ -20,33 +17,32 @@ const listNav = [
 ]
 
 export const Header = () => {
-  const [swithMenu, setSwithMenu] = useState(false)
-
-  const handleSwitchMenu = () => setSwithMenu(!swithMenu)
-
   return (
     <header>
-      <nav className="p-2 flex justify-between">
-        <div className="text-xl font-bold">
-          WorkFlow
-          <span className="text-emerald-700">BETA</span>
-        </div>
+      <nav className="p-4 flex justify-between">
+        <Link href={'/'}>
+          <div className="text-xl font-bold text-customGreen">WorkFlow</div>
+        </Link>
 
-        <button onClick={handleSwitchMenu}>
-          {swithMenu ? <X /> : <Menu />}
-        </button>
+        <MenuMobile list={listNav} />
 
-        {swithMenu && (
-          <ul className="absolute top-10 bg-white text-black left-0 right-0">
-            {listNav.map((value) => (
-              <Link href={value.href} key={value.name}>
-                <li className="p-1 hover:bg-gray-100 cursor-pointer rounded">
-                  {value.name}
-                </li>
-              </Link>
-            ))}
-          </ul>
-        )}
+        <ul className="hidden lg:flex gap-5 text-customGreen">
+          <Link href={'/'}>
+            <li className="p-1 cursor-pointer rounded-lg hover:bg-white transition ease-in-out duration-200">
+              Home
+            </li>
+          </Link>
+          <Link href={'/signIn'}>
+            <li className="p-1 cursor-pointer rounded-lg hover:bg-white transition ease-in-out duration-200">
+              Login
+            </li>
+          </Link>
+          <Link href={'/signUp'}>
+            <li className="bg-white border-1 rounded-lg cursor-pointer p-1 hover:bg-customGreen hover:text-white transition ease-in-out duration-300">
+              Criar conta
+            </li>
+          </Link>
+        </ul>
       </nav>
     </header>
   )
