@@ -32,7 +32,7 @@ export const Header = () => {
               Home
             </li>
           </Link>
-          <Link href={'/signIn'}>
+          <Link href={'/login'}>
             <li className="p-1 cursor-pointer rounded-lg hover:bg-white transition ease-in-out duration-200">
               Login
             </li>
