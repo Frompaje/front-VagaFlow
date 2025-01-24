@@ -12,7 +12,7 @@ const listNav = [
   },
   {
     name: 'Criar conta',
-    href: '/signUp',
+    href: '/signup',
   },
 ]
 
@@ -37,7 +37,7 @@ export const Header = () => {
               Login
             </li>
           </Link>
-          <Link href={'/signUp'}>
+          <Link href={'/signup'}>
             <li className="bg-white border-1 rounded-lg cursor-pointer p-1 hover:bg-customGreen hover:text-white transition ease-in-out duration-300">
               Criar conta
             </li>

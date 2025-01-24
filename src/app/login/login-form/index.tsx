@@ -43,18 +43,14 @@ export const LoginForm = () => {
     <form onSubmit={handleSubmit(handleSubmitLogin)}>
       <div className="flex flex-col items-center gap-2  p-2">
         <div className="w-4/5 lg:w-3/5 flex flex-col gap-2 ">
+          <label htmlFor="email">Email</label>
           <Input placeholder="example@email.com" {...register('email')} />
+          <label htmlFor="passowrd">Password</label>
           <Input
             type="password"
             placeholder="*********"
             {...register('password')}
           />
-          <Link
-            className="text-black underline  text-end hover:text-neutral-900"
-            href={'/'}
-          >
-            Esqueci minha senha
-          </Link>
         </div>
 
         <Button
@@ -68,7 +64,7 @@ export const LoginForm = () => {
           <span>Ainda não tem conta?</span>
           <Link
             className="text-black underline hover:text-neutral-900"
-            href={'/'}
+            href={'/signup'}
           >
             Cadastre-se agora
           </Link>
