@@ -13,3 +13,9 @@ export type JwtPayload = {
   user: string
   token: string
 }
+
+export type JwtDecode = {
+  name: string
+  email: string
+  id: string
+}
